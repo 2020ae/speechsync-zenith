@@ -18,10 +18,16 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    // For debugging
+    console.log(`Attempting to scroll to section: ${id}`);
+    
     const element = document.getElementById(id);
     if (element) {
+      console.log(`Found element with id: ${id}`);
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMobileMenuOpen(false);
+    } else {
+      console.error(`Element with id "${id}" not found`);
     }
   };
 
