@@ -27,19 +27,19 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="text-muted-foreground hover:text-primary transition-colors">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Contact
                 </Link>
+              </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  Careers
+                </a>
               </li>
             </ul>
           </div>
@@ -48,24 +48,24 @@ const Footer = () => {
             <h3 className="font-medium mb-4">Product</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/features" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
                   Features
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link to="/api" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                   API
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/documentation" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                   Documentation
-                </Link>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  Integrations
+                </a>
               </li>
             </ul>
           </div>
@@ -75,23 +75,23 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">
-                  Terms
+                  Terms of Service
                 </Link>
               </li>
               <li>
                 <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
-                  Privacy
+                  Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/cookies" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                   Cookies
-                </Link>
+                </a>
               </li>
               <li>
-                <Link to="/licenses" className="text-muted-foreground hover:text-primary transition-colors">
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                   Licenses
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

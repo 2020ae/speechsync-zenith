@@ -42,12 +42,12 @@ const Navigation = () => {
             <Link to="/#how-it-works" className="text-foreground/80 hover:text-primary transition-colors">
               How It Works
             </Link>
-            <Link to="/#pricing" className="text-foreground/80 hover:text-primary transition-colors">
-              Pricing
+            <Link to="/about" className="text-foreground/80 hover:text-primary transition-colors">
+              About
             </Link>
-            <Button className="bg-primary hover:bg-primary/90 transition-colors">
-              Try It Free
-            </Button>
+            <Link to="/contact" className="text-foreground/80 hover:text-primary transition-colors">
+              Contact
+            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -86,15 +86,19 @@ const Navigation = () => {
               How It Works
             </Link>
             <Link 
-              to="/#pricing" 
+              to="/about" 
               className="py-2 text-foreground/80 hover:text-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Pricing
+              About
             </Link>
-            <Button className="bg-primary hover:bg-primary/90 transition-colors w-full">
-              Try It Free
-            </Button>
+            <Link 
+              to="/contact" 
+              className="py-2 text-foreground/80 hover:text-primary transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
           </div>
         </nav>
       )}
