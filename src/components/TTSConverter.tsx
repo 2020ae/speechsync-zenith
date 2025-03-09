@@ -90,23 +90,23 @@ const TTSConverter = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-xl border border-primary/20">
-      <div className="bg-gradient-to-r from-primary/20 to-secondary/50 p-5 flex items-center justify-between border-b border-border/30">
+    <div className="glass-card rounded-xl overflow-hidden shadow-xl">
+      <div className="bg-gradient-to-r from-primary/20 to-background p-5 flex items-center justify-between border-b border-border/30">
         <div className="flex items-center gap-2">
           <div className="h-3 w-3 rounded-full bg-destructive"></div>
           <div className="h-3 w-3 rounded-full bg-yellow-400"></div>
           <div className="h-3 w-3 rounded-full bg-green-400"></div>
         </div>
-        <div className="text-sm font-semibold tracking-wide text-primary">SpeechSync Converter</div>
+        <div className="text-sm font-semibold tracking-wide">SpeechSync Converter</div>
         <div className="w-20"></div>
       </div>
       
-      <div className="p-8 md:p-10 space-y-6 bg-white/95 backdrop-blur-sm dark:bg-black/90">
+      <div className="p-8 md:p-10 space-y-6 bg-white/50 backdrop-blur-sm dark:bg-black/20">
         <div className="flex flex-col md:flex-row gap-4 items-stretch">
           <div className="flex-1 flex flex-col gap-2">
             <label className="text-sm font-medium text-primary">Voice Selection</label>
             <select 
-              className="h-11 px-4 py-2 rounded-md border border-primary/20 bg-white dark:bg-gray-800 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+              className="h-11 px-4 py-2 rounded-md border border-input/50 bg-background text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
               value={selectedVoice}
               onChange={handleVoiceChange}
             >
@@ -121,7 +121,7 @@ const TTSConverter = () => {
             <Button 
               size="sm" 
               variant="outline" 
-              className="gap-2 h-11 px-4 hover:bg-primary/10 border-primary/20 transition-all duration-200"
+              className="gap-2 h-11 px-4 hover:bg-primary/10 transition-all duration-200"
               onClick={previewVoice}
             >
               <Volume2 size={16} />
@@ -133,7 +133,7 @@ const TTSConverter = () => {
         <div className="space-y-2">
           <label className="text-sm font-medium text-primary">Your Text</label>
           <textarea 
-            className="w-full min-h-[120px] px-4 py-3 rounded-md border border-primary/20 bg-white dark:bg-gray-800 resize-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
+            className="w-full min-h-[120px] px-4 py-3 rounded-md border border-input/50 bg-background resize-none focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
             placeholder="Enter your text here to convert to speech..."
             value={text}
             onChange={handleTextChange}
@@ -142,7 +142,7 @@ const TTSConverter = () => {
         
         <div className="flex justify-between items-center">
           <div className="text-sm text-muted-foreground">
-            <span className="font-medium text-foreground">Try now:</span> No signup required
+            <span className="font-medium text-foreground">Pro tip:</span> Try different voices for unique results
           </div>
           <Button 
             className="gap-2 bg-primary hover:bg-primary/90 transition-all duration-200 px-5 py-2.5"
@@ -165,7 +165,7 @@ const TTSConverter = () => {
         )}
 
         {audioUrl && (
-          <div className="mt-4 p-4 border border-primary/20 rounded-lg bg-secondary/20">
+          <div className="mt-4 p-4 border border-border/30 rounded-lg bg-secondary/20">
             <audio 
               ref={audioRef}
               controls

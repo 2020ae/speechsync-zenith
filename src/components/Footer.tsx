@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-secondary py-12 md:py-16">
       <div className="container px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
           <div className="md:col-span-1">
             <Link to="/" className="text-xl font-medium mb-4 inline-block">
               SpeechSync
@@ -31,6 +31,42 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  Careers
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="font-medium mb-4">Product</h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
+                  Features
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  API
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  Documentation
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  Integrations
+                </a>
+              </li>
             </ul>
           </div>
           
@@ -46,6 +82,16 @@ const Footer = () => {
                 <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
                   Privacy Policy
                 </Link>
+              </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  Cookies
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                  Licenses
+                </a>
               </li>
             </ul>
           </div>

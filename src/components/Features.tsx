@@ -1,88 +1,69 @@
 
-import { 
-  BarChart3, 
-  Clock, 
-  Code2, 
-  Headphones, 
-  Languages, 
-  MicVocal, 
-  Monitor, 
-  MoveHorizontal
-} from "lucide-react";
+import { Laptop, Mic, Settings, Headphones, Zap, Layers } from "lucide-react";
 
 const Features = () => {
+  const features = [
+    {
+      icon: <Mic className="h-10 w-10 text-primary" />,
+      title: "Lifelike Voices",
+      description: "Our advanced AI generates human-like speech with natural intonation, emphasis, and emotion."
+    },
+    {
+      icon: <Laptop className="h-10 w-10 text-primary" />,
+      title: "Cross-Platform",
+      description: "Use SpeechSync seamlessly across all your devices with our cloud-based solution."
+    },
+    {
+      icon: <Settings className="h-10 w-10 text-primary" />,
+      title: "Complete Control",
+      description: "Adjust pitch, speed, and emphasis to get the perfect voice for your content."
+    },
+    {
+      icon: <Headphones className="h-10 w-10 text-primary" />,
+      title: "Premium Voices",
+      description: "Choose from a diverse library of professional voice options across multiple languages."
+    },
+    {
+      icon: <Zap className="h-10 w-10 text-primary" />,
+      title: "Instant Generation",
+      description: "Generate high-quality audio in seconds, no matter the length of your text."
+    },
+    {
+      icon: <Layers className="h-10 w-10 text-primary" />,
+      title: "Format Support",
+      description: "Export your audio in multiple formats compatible with any platform or device."
+    }
+  ];
+
   return (
-    <section id="features" className="py-24 bg-background">
+    <section id="features" className="py-20 bg-secondary/50">
       <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center text-center space-y-4 mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Advanced Features
+        <div className="flex flex-col items-center text-center mb-16">
+          <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            Features
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+            Everything You Need for Perfect TTS
           </h2>
-          <p className="max-w-[900px] text-muted-foreground text-lg">
-            SpeechSync offers cutting-edge text-to-speech capabilities with a focus on quality and ease-of-use.
+          <p className="max-w-[700px] text-lg text-muted-foreground">
+            SpeechSync combines powerful technology with an intuitive interface to deliver
+            exceptional text-to-speech conversion.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
-          <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-            <div className="h-12 w-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-5">
-              <MicVocal size={24} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div 
+              key={index} 
+              className="glass-card rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all"
+            >
+              <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+                {feature.icon}
+              </div>
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p className="text-muted-foreground">{feature.description}</p>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Natural-Sounding Voices</h3>
-            <p className="text-muted-foreground">
-              Our AI-powered voices sound remarkably human, with natural intonation and emotion.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-            <div className="h-12 w-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-5">
-              <Languages size={24} />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Multiple Voice Options</h3>
-            <p className="text-muted-foreground">
-              Choose from a variety of voices with different accents and characteristics.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-            <div className="h-12 w-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-5">
-              <Clock size={24} />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Instant Generation</h3>
-            <p className="text-muted-foreground">
-              Convert your text to speech in seconds, with no lengthy processing times.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-            <div className="h-12 w-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-5">
-              <MoveHorizontal size={24} />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Simple to Use</h3>
-            <p className="text-muted-foreground">
-              Our intuitive interface makes it easy to create high-quality voice content.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-            <div className="h-12 w-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-5">
-              <Headphones size={24} />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Premium Audio Quality</h3>
-            <p className="text-muted-foreground">
-              Crystal clear audio output suitable for professional content creation.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-            <div className="h-12 w-12 flex items-center justify-center rounded-full bg-primary/10 text-primary mb-5">
-              <Monitor size={24} />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Cross-Platform</h3>
-            <p className="text-muted-foreground">
-              Use SpeechSync on any device with a web browser, no installation required.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>
