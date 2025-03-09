@@ -17,6 +17,14 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -33,15 +41,18 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-foreground/80 hover:text-primary transition-colors">
-              Home
-            </Link>
-            <Link to="/#features" className="text-foreground/80 hover:text-primary transition-colors">
+            <button 
+              onClick={() => scrollToSection('features')} 
+              className="text-foreground/80 hover:text-primary transition-colors"
+            >
               Features
-            </Link>
-            <Link to="/#how-it-works" className="text-foreground/80 hover:text-primary transition-colors">
+            </button>
+            <button 
+              onClick={() => scrollToSection('how-it-works')} 
+              className="text-foreground/80 hover:text-primary transition-colors"
+            >
               How It Works
-            </Link>
+            </button>
             <Link to="/about" className="text-foreground/80 hover:text-primary transition-colors">
               About
             </Link>
@@ -64,27 +75,18 @@ const Navigation = () => {
       {isMobileMenuOpen && (
         <nav className="md:hidden py-4 px-6 bg-white/95 backdrop-blur-md border-t border-border/50 animate-fade-in">
           <div className="flex flex-col space-y-4">
-            <Link 
-              to="/" 
+            <button 
+              onClick={() => scrollToSection('features')}
               className="py-2 text-foreground/80 hover:text-primary transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link 
-              to="/#features" 
-              className="py-2 text-foreground/80 hover:text-primary transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
             >
               Features
-            </Link>
-            <Link 
-              to="/#how-it-works" 
+            </button>
+            <button 
+              onClick={() => scrollToSection('how-it-works')}
               className="py-2 text-foreground/80 hover:text-primary transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
             >
               How It Works
-            </Link>
+            </button>
             <Link 
               to="/about" 
               className="py-2 text-foreground/80 hover:text-primary transition-colors"
